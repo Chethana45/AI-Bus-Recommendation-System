@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+
+/* Styles Index - Import all CSS files in order */
+
+/* 1. Design System & Theme Variables */
+@import './theme.css';
+
+/* 2. Global Styles & Resets */
+@import './globals.css';

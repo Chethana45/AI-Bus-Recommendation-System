@@ -1,0 +1,964 @@
+/* =========================================================
+   BUSBOOK — EMERGENCY / PRIORITY RESERVATION
+   Dark premium UI + red emergency accents
+   ========================================================= */
+
+.emergency-page {
+  min-height: calc(100vh - 84px);
+  background: #070b1a;
+  color: #f8fafc;
+  padding-bottom: 80px;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.emergency-hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 55px 20px 35px;
+}
+
+.emergency-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #f87171;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.emergency-hero h1 {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+  font-weight: 800;
+  color: #ffffff;
+  max-width: 750px;
+}
+
+.emergency-hero > p {
+  margin: 18px 0 0;
+  max-width: 700px;
+  color: #aeb6ca;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Red emergency notice */
+
+.emergency-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 760px;
+  margin-top: 25px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(127, 29, 29, 0.16);
+  border: 1px solid rgba(248, 113, 113, 0.25);
+  border-left: 4px solid #ef4444;
+  color: #cbd5e1;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.emergency-notice svg {
+  flex-shrink: 0;
+  color: #f87171;
+  margin-top: 1px;
+}
+
+/* =========================================================
+   MAIN SEARCH PANEL
+   ========================================================= */
+
+.emergency-panel {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.emergency-form {
+  background: #101526;
+  border: 1px solid #252d43;
+  border-radius: 22px;
+  padding: 30px;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================================================
+   FORM TITLE
+   ========================================================= */
+
+.emergency-form-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  margin-bottom: 27px;
+}
+
+.emergency-form-title > svg {
+  color: #8b6cff;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.emergency-form-title h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 750;
+  letter-spacing: -0.4px;
+}
+
+.emergency-form-title p {
+  margin: 6px 0 0;
+  color: #7f8aa3;
+  font-size: 13px;
+}
+
+/* =========================================================
+   MAIN FORM GRID
+   THIS FIXES FROM / TO / DATE / PASSENGERS
+   ========================================================= */
+
+.emergency-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 26px;
+}
+
+.emergency-grid > label {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 8px;
+}
+
+.emergency-grid > label > span {
+  color: #e5e7eb;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+/* React Select */
+
+.emergency-grid .react-select__control {
+  width: 100%;
+}
+
+.emergency-grid .css-b62m3t-container {
+  width: 100%;
+}
+
+/* =========================================================
+   DATE + PASSENGER INPUTS
+   ========================================================= */
+
+.emergency-grid input[type="date"],
+.emergency-grid select {
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+
+  border-radius: 12px;
+  border: 1px solid #2b344c;
+
+  background: #141a2b;
+  color: #f8fafc;
+
+  padding: 0 14px;
+  font-size: 14px;
+
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.emergency-grid input[type="date"]:focus,
+.emergency-grid select:focus {
+  border-color: #765cff;
+  box-shadow: 0 0 0 3px rgba(118, 92, 255, 0.12);
+}
+
+.emergency-grid input[type="date"] {
+  color-scheme: dark;
+}
+
+/* Dropdown options */
+
+.emergency-grid select option {
+  background: #111827;
+  color: #ffffff;
+}
+
+/* =========================================================
+   REACT SELECT — DARK STYLE
+   ========================================================= */
+
+.emergency-grid .css-13cymwt-control,
+.emergency-grid .css-t3ipsp-control {
+  min-height: 50px;
+  height: 50px;
+
+  background: #141a2b;
+  border: 1px solid #2b344c;
+  border-radius: 12px;
+
+  box-shadow: none;
+}
+
+.emergency-grid .css-t3ipsp-control {
+  border-color: #765cff;
+}
+
+.emergency-grid .css-1dimb5e-singleValue,
+.emergency-grid .css-1wa3j5v-singleValue {
+  color: #f8fafc;
+}
+
+.emergency-grid .css-1jqq78o-placeholder,
+.emergency-grid .css-1jqq78o-placeholder {
+  color: #68738b;
+}
+
+.emergency-grid .css-1nmdiq5-menu,
+.emergency-grid .css-qr46ko-menu {
+  background: #111827;
+  border: 1px solid #30394f;
+  z-index: 100;
+}
+
+.emergency-grid .css-d7l1ni-option,
+.emergency-grid .css-10wo9uf-option {
+  background: #111827;
+  color: #ffffff;
+}
+
+.emergency-grid .css-d7l1ni-option:hover,
+.emergency-grid .css-10wo9uf-option:hover {
+  background: rgba(118, 92, 255, 0.18);
+}
+
+/* =========================================================
+   EMERGENCY REASON
+   ========================================================= */
+
+.emergency-reasons {
+  margin-top: 8px;
+}
+
+.emergency-reasons > span {
+  display: block;
+  color: #e5e7eb;
+  font-size: 14px;
+  font-weight: 650;
+  margin-bottom: 12px;
+}
+
+.reason-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 11px;
+}
+
+.reason-option {
+  min-height: 50px;
+  padding: 10px 12px;
+
+  border: 1px solid #2b344c;
+  border-radius: 11px;
+
+  background: #141a2b;
+  color: #aeb6ca;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reason-option:hover {
+  border-color: #6555d8;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.reason-option.active {
+  background: rgba(118, 92, 255, 0.13);
+  border-color: #765cff;
+  color: #ffffff;
+  box-shadow: 0 0 0 1px rgba(118, 92, 255, 0.1);
+}
+
+/* =========================================================
+   PRIORITY
+   ========================================================= */
+
+.priority-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.priority-option {
+  min-height: 90px;
+  padding: 18px;
+
+  text-align: left;
+
+  border: 1px solid #2b344c;
+  border-radius: 14px;
+
+  background: #141a2b;
+  color: #ffffff;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.priority-option:hover {
+  border-color: #6555d8;
+  transform: translateY(-1px);
+}
+
+.priority-option.active {
+  border-color: #765cff;
+  background: rgba(118, 92, 255, 0.12);
+  box-shadow: 0 0 0 1px rgba(118, 92, 255, 0.1);
+}
+
+.priority-option strong {
+  display: block;
+  color: #ffffff;
+  font-size: 15px;
+  margin-bottom: 7px;
+}
+
+.priority-option small {
+  display: block;
+  color: #8f9ab0;
+  font-size: 12px;
+}
+
+/* =========================================================
+   SEARCH BUTTON
+   ========================================================= */
+
+.emergency-search-button {
+  display: block;
+  width: 100%;
+  height: 52px;
+
+  margin-top: 22px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #6657e8, #875cf5);
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 28px rgba(102, 87, 232, 0.22);
+  transition: all 0.2s ease;
+}
+
+.emergency-search-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(102, 87, 232, 0.3);
+}
+
+.emergency-search-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.emergency-error {
+  max-width: 1100px;
+  margin: 22px auto;
+  padding: 14px 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 12px;
+
+  background: rgba(127, 29, 29, 0.16);
+  border: 1px solid rgba(248, 113, 113, 0.28);
+  border-left: 4px solid #ef4444;
+
+  color: #fecaca;
+  font-size: 13px;
+}
+
+.emergency-error svg {
+  color: #f87171;
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   RESULTS
+   ========================================================= */
+
+.emergency-results {
+  max-width: 1100px;
+  margin: 35px auto 0;
+  padding: 0 20px;
+}
+
+.emergency-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 17px;
+}
+
+.emergency-section-heading h2 {
+  margin: 3px 0 0;
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.emergency-section-heading > span {
+  color: #7f8aa3;
+  font-size: 13px;
+}
+
+.emergency-eyebrow {
+  color: #8b6cff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Bus list */
+
+.emergency-bus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.emergency-bus-card {
+  display: grid;
+  grid-template-columns: 1.2fr 1.4fr 0.7fr;
+  align-items: center;
+  gap: 25px;
+
+  padding: 21px;
+
+  background: #101526;
+  border: 1px solid #293149;
+  border-radius: 16px;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.emergency-bus-card:hover {
+  border-color: #6555d8;
+  transform: translateY(-1px);
+}
+
+.emergency-bus-card.selected {
+  border-color: #765cff;
+  background: #12182c;
+  box-shadow: 0 0 0 1px rgba(118, 92, 255, 0.12);
+}
+
+.bus-type-pill {
+  display: inline-block;
+  padding: 4px 8px;
+  margin-bottom: 8px;
+
+  border-radius: 6px;
+
+  background: rgba(118, 92, 255, 0.12);
+  color: #a99aff;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.emergency-bus-card h3 {
+  margin: 0 0 4px;
+  color: #ffffff;
+  font-size: 17px;
+}
+
+.emergency-bus-card > div:first-child p {
+  margin: 0;
+  color: #758199;
+  font-size: 12px;
+}
+
+.emergency-route {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.emergency-route strong {
+  color: #f8fafc;
+  font-size: 14px;
+}
+
+.emergency-route > span {
+  color: #765cff;
+}
+
+.emergency-route small {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  color: #7f8aa3;
+  font-size: 12px;
+}
+
+.emergency-bus-price {
+  text-align: right;
+}
+
+.emergency-bus-price span {
+  display: block;
+  color: #8f9ab0;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.emergency-bus-price strong {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.emergency-bus-price small {
+  color: #7f8aa3;
+  margin-left: 4px;
+}
+
+/* =========================================================
+   SEAT / BOOKING PANEL
+   ========================================================= */
+
+.booking-panel {
+  margin-top: 35px;
+}
+
+.booking-panel .emergency-form-title {
+  margin-bottom: 25px;
+}
+
+/* Seat grid */
+
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 48px);
+  gap: 10px;
+
+  padding: 20px;
+
+  background: #0b1020;
+  border: 1px solid #222b40;
+  border-radius: 15px;
+
+  width: fit-content;
+  max-width: 100%;
+}
+
+.emergency-seat {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 9px;
+  border: 1px solid #30394f;
+
+  background: #161d30;
+  color: #cbd5e1;
+
+  font-size: 13px;
+  font-weight: 650;
+
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.emergency-seat:hover:not(:disabled) {
+  border-color: #765cff;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.emergency-seat.selected {
+  background: #765cff;
+  border-color: #765cff;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(118, 92, 255, 0.25);
+}
+
+.emergency-seat.booked,
+.emergency-seat:disabled {
+  background: #090d18;
+  border-color: #1d2536;
+  color: #414a5e;
+  cursor: not-allowed;
+}
+
+/* Seat help */
+
+.seat-help {
+  display: flex;
+  gap: 20px;
+  margin-top: 12px;
+  color: #7f8aa3;
+  font-size: 12px;
+}
+
+/* =========================================================
+   PASSENGERS
+   ========================================================= */
+
+.passenger-list {
+  margin-top: 30px;
+}
+
+.passenger-list > h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin: 0 0 15px;
+}
+
+.passenger-card {
+  background: #141a2b;
+  border: 1px solid #2a3349;
+  border-radius: 14px;
+  padding: 19px;
+  margin-bottom: 13px;
+}
+
+.passenger-card > strong {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.passenger-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.passenger-grid input,
+.passenger-grid select {
+  width: 100%;
+  height: 47px;
+  box-sizing: border-box;
+
+  padding: 0 13px;
+
+  border-radius: 10px;
+  border: 1px solid #2b344c;
+
+  background: #0f1525;
+  color: #f8fafc;
+
+  outline: none;
+  font-size: 13px;
+}
+
+.passenger-grid input::placeholder {
+  color: #68738b;
+}
+
+.passenger-grid input:focus,
+.passenger-grid select:focus {
+  border-color: #765cff;
+  box-shadow: 0 0 0 3px rgba(118, 92, 255, 0.1);
+}
+
+.passenger-grid select option {
+  background: #111827;
+  color: #ffffff;
+}
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.emergency-summary {
+  margin-top: 25px;
+  padding: 22px;
+
+  background: #0c1222;
+  border: 1px solid #293149;
+  border-radius: 15px;
+}
+
+.emergency-summary > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 11px 0;
+
+  border-bottom: 1px solid #232c40;
+}
+
+.emergency-summary > div > span {
+  color: #8994a9;
+  font-size: 13px;
+}
+
+.emergency-summary > div > strong {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.emergency-summary .summary-total {
+  margin-top: 7px;
+  padding-top: 16px;
+  border-bottom: none;
+  border-top: 1px solid #30394f;
+}
+
+.emergency-summary .summary-total span {
+  color: #ffffff;
+  font-weight: 650;
+}
+
+.emergency-summary .summary-total strong {
+  color: #ffffff;
+  font-size: 22px;
+}
+
+/* =========================================================
+   CONFIRM BUTTON
+   ========================================================= */
+
+.emergency-book-button {
+  width: 100%;
+  height: 54px;
+
+  margin-top: 17px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #6657e8, #875cf5);
+  color: white;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 28px rgba(102, 87, 232, 0.2);
+  transition: all 0.2s ease;
+}
+
+.emergency-book-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(102, 87, 232, 0.3);
+}
+
+.emergency-book-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================================================
+   SUCCESS
+   ========================================================= */
+
+.emergency-success {
+  max-width: 1100px;
+  margin: 25px auto;
+  padding: 17px 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: 13px;
+
+  color: #bbf7d0;
+}
+
+.emergency-success svg {
+  color: #4ade80;
+}
+
+.emergency-success div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.emergency-success strong {
+  color: #86efac;
+}
+
+.emergency-success span {
+  font-size: 12px;
+}
+
+/* =========================================================
+   FOOTER NOTE
+   ========================================================= */
+
+.emergency-footer-note {
+  max-width: 1100px;
+  margin: 30px auto 0;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #69758c;
+  font-size: 12px;
+}
+
+.emergency-footer-note svg {
+  color: #765cff;
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .emergency-hero {
+    padding-top: 40px;
+  }
+
+  .emergency-hero h1 {
+    font-size: 38px;
+  }
+
+  .reason-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .emergency-bus-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .emergency-bus-price {
+    text-align: left;
+  }
+
+  .emergency-bus-price {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .emergency-page {
+    padding-bottom: 50px;
+  }
+
+  .emergency-hero {
+    padding: 35px 16px 25px;
+  }
+
+  .emergency-hero h1 {
+    font-size: 32px;
+  }
+
+  .emergency-hero > p {
+    font-size: 14px;
+  }
+
+  .emergency-panel {
+    padding: 0 12px;
+  }
+
+  .emergency-form {
+    padding: 20px;
+    border-radius: 17px;
+  }
+
+  /* From / To / Date / Passengers become vertical */
+
+  .emergency-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .reason-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .priority-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .emergency-results {
+    padding: 0 12px;
+  }
+
+  .emergency-bus-card {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .emergency-route {
+    padding-top: 5px;
+  }
+
+  .emergency-bus-price {
+    grid-column: auto;
+  }
+
+  .booking-panel {
+    margin-top: 25px;
+  }
+
+  .seat-grid {
+    grid-template-columns: repeat(5, 42px);
+    gap: 7px;
+    padding: 14px;
+  }
+
+  .emergency-seat {
+    width: 42px;
+    height: 42px;
+  }
+
+  .passenger-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .emergency-footer-note {
+    padding: 0 12px;
+  }
+}
